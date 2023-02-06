@@ -1,10 +1,6 @@
-/* Убираем внутренние отступы */
 ul[class],
-ol[class] {
-    padding: 0;
-}
+ol[class] {padding: 0;}
 
-/* Убираем внешние отступы */
 body,
 h1,
 h3,
@@ -17,38 +13,27 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
-    margin: 0;
-}
+dd {margin: 0;}
 
-/* Выставляем основные настройки по-умолчанию для body */
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: "MacPawFixel", "Roboto", "Arial", sans-serif  ;
     font-weight: 600;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
     list-style: none;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-/*a:not([class]) {
-    text-decoration-skip-ink: auto;
-}*/
-
-/* Упрощаем работу с изображениями */
 img {
     max-width: 100%;
     display: block;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -75,11 +60,12 @@ button {
 }
 
 a.button {
-    padding: 20px 60px;
+    padding: 20px 50px 17px 50px;
     background-color: #124e78;
     color: #ffffff;
     text-decoration: none;
 }
+
 
 
 /*---Hamburger-Menu---*/
@@ -97,6 +83,16 @@ a.button {
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
+}
+
+.burgerLogo{
+    width: 150px;
+    padding: 0 0 30px 20px;
+
+}
+
+.burger-logo a{
+    width: 100%;
 }
 
 .burger-menu_button:hover .burger-menu_lines {
@@ -152,14 +148,14 @@ a.button {
 }
 
 .burger-menu_nav {
-    padding-top: 120px;
+    padding-top: 80px;
     position: fixed;
     top: 0;
     z-index: 20;
     display: flex;
     flex-flow: column;
     height: 100%;
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     overflow-y: auto;
     right: -100%;
     -webkit-transition: 0.8s;
@@ -185,6 +181,7 @@ a.button {
     letter-spacing: 5px;
     font-weight: 400;
     color: #124e78;
+    background-color: #BFE2FF;
     border-bottom: 1px solid #fff;
 }
 
@@ -193,7 +190,7 @@ a.button {
 }
 
 .burger-menu_link:hover {
-    filter: brightness(0.9);
+    filter: brightness(0.7);
 }
 
 .burger-menu_overlay {
@@ -239,17 +236,14 @@ section {
     left: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 150px 1fr 250px;
+    grid-template-columns: 150px 1fr 260px;
 }
 
-.burger-logo {
-    padding: 15px;
-    width: 180px;
-}
+
 
 .logo {
-    padding: 15px 0;
-    width: 150px;
+    padding: 0;
+    width: 100px;
     display: flex;
     justify-self: center;
     align-self: center;
@@ -358,6 +352,8 @@ a.transparent {
 
 .banner1 .banner1Image {
     padding-top: 120px;
+    display: flex;
+    align-items: center;
 }
 
 /*---Grant---*/
@@ -796,6 +792,13 @@ a.transparent {
     justify-self: center;
 }
 
+.eventsLine{
+    display: none;
+    height: 20px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
 .eventDatesMob {
     display: none;
 }
@@ -898,6 +901,10 @@ a.transparent {
     width: 50px;
 }
 
+.contactsSocial .grantLogo{
+    width: 86px;
+}
+
 .contactsSocial .TMlogo {
     width: 130px;
 }
@@ -930,11 +937,15 @@ a.transparent {
 
 /*--- Slider ---*/
 
+.sliderContainer{
+    overflow-x: hidden ;
+}
+
 .wrapper {
     height: 550px;
     margin: 10px auto 0;
     position: relative;
-    width: 860px;
+    width: 850px;
 }
 
 .slider {
@@ -1065,7 +1076,7 @@ a.transparent {
 
     .titlePage {
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-        url("https://static.tildacdn.com/tild3331-3863-4133-b333-343565656233/__20_1.jpg");
+        url("images/header_mini.jpg");
         -webkit-background-size: 100%;
         background-size: cover;
         background-attachment: fixed;
@@ -1215,6 +1226,10 @@ a.transparent {
         display: none;
     }
 
+    .eventsLine{
+        display: block;
+    }
+
     .eventDescription .eventDatesMob {
         display: block;
         font-size: 18px;
@@ -1232,6 +1247,13 @@ a.transparent {
     .linkContainer {
         display: flex;
         justify-content: space-around;
+    }
+
+    .linkContainer p {
+        padding: 0 20px;
+    }
+    .social{
+        margin-right: 15px;
     }
 
 }
@@ -1386,3 +1408,7 @@ a.transparent {
     }
 }
 
+@font-face {
+    font-family: "MacPawFixel";
+    src: url("fonts/MacPawFixel-VF.ttf");
+}
