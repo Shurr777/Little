@@ -1,5 +1,7 @@
 ul[class],
-ol[class] {padding: 0;}
+ol[class] {
+    padding: 0;
+}
 
 body,
 h1,
@@ -13,14 +15,16 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {margin: 0;}
+dd {
+    margin: 0;
+}
 
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: "MacPawFixel", "Roboto", "Arial", sans-serif  ;
+    font-family: "MacPawFixel", "Roboto", "Arial", sans-serif;
     font-weight: 600;
 }
 
@@ -66,6 +70,16 @@ a.button {
     text-decoration: none;
 }
 
+/*section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: #000;
+}*/
 
 
 /*---Hamburger-Menu---*/
@@ -85,13 +99,13 @@ a.button {
     transition: 0.4s;
 }
 
-.burgerLogo{
+.burgerLogo {
     width: 150px;
     padding: 0 0 30px 20px;
 
 }
 
-.burger-logo a{
+.burger-logo a {
     width: 100%;
 }
 
@@ -208,18 +222,6 @@ a.button {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: sans-serif;
-    font-size: 72px;
-    text-transform: uppercase;
-    color: #000;
-}
-
-
 /*--- Header ---*/
 
 .header {
@@ -238,7 +240,6 @@ section {
     display: grid;
     grid-template-columns: 150px 1fr 260px;
 }
-
 
 
 .logo {
@@ -330,13 +331,14 @@ a.transparent {
 
 .titleBlock .titleDate {
     padding-top: 30px;
+    font-size: 25px;
+    text-decoration: underline;
 }
 
 .titleButtonBlock {
     display: flex;
     padding-top: 70px;
 }
-
 
 /*---Banner---*/
 
@@ -357,7 +359,6 @@ a.transparent {
 }
 
 /*---Grant---*/
-
 .grant {
     background-color: #F2F2F2;
     padding-bottom: 100px;
@@ -408,13 +409,11 @@ a.transparent {
     font-weight: 700;
 }
 
-.grantCard ol {
+.grantCard ul {
     padding-left: 20px;
+    list-style-type: none;
 }
-
-
 /*---Themes---*/
-
 .themes {
     background-color: #fff;
     padding-bottom: 80px;
@@ -443,8 +442,20 @@ a.transparent {
     font-weight: 300;
 }
 
-/*---Therms---*/
+/*---Paralax---*/
 
+.paralax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url("images/NewHeader.jpg");
+    -webkit-background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    object-fit: cover;
+}
+
+
+/*---Therms---*/
 .therms {
     background-color: #F2F2F2;
 }
@@ -508,9 +519,8 @@ a.transparent {
 }
 
 .textBlock p {
-    padding-bottom: 30px;
+    margin: 30px 10px 0 0;
 }
-
 /*---How to apply---*/
 
 .toApply {
@@ -526,12 +536,8 @@ a.transparent {
     align-items: center;
 }
 
-.toApplyBlock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-.line {
+/*.line {
     width: 2px;
     background: #dcddde;
     height: 30px;
@@ -579,13 +585,30 @@ a.transparent {
 
 .number p {
     font-size: 20px;
-}
+}*/
 
 .toApplyText {
     font-size: 18px;
     line-height: 1.55;
     font-weight: 300;
     padding: 0 20px 30px 0;
+    width: 800px;
+}
+
+.toApplyText ol {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.warning {
+    font-size: 20px;
+}
+
+.warning span {
+    padding-left: 10px;
+    font-size: 22px;
+    color: #124e78;
+    font-weight: bold;
 }
 
 .toApplyButtonContainer {
@@ -601,6 +624,7 @@ a.transparent {
     color: #ffffff;
 }
 
+
 /*---Criteria---*/
 
 .criteria {
@@ -609,22 +633,28 @@ a.transparent {
 }
 
 .criteria h2 {
+    margin-top: 0;
     padding-bottom: 0;
 }
 
 .criteriaCardBlock {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
 }
 
 .criteriaCard {
     padding: 25px;
+    border: 1px solid grey;
 }
 
 .criteriaCard h3 {
     font-size: 22px;
     margin-bottom: 25px;
     margin-top: 12px;
+}
+.criteriaCard ul {
+    padding-left: 10px;
 }
 
 .criteriaCard p, li {
@@ -696,13 +726,13 @@ a.transparent {
     box-sizing: border-box;
     transition: color 0.5s, padding 0.5s;
     overflow: hidden;
-    font-family: Verdana, sans-serif;
     font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 16px rgba(0, 0, 0, 0.2);
 }
 
 .acor-container .acor-body p {
     margin: 0 0 10px;
+    font-weight: 300;
 }
 
 .acor-container label {
@@ -712,10 +742,9 @@ a.transparent {
     padding: 15px 20px;
     width: 100%;
     color: #BFE2FF;
-    font-weight: 300;
+    font-weight: 600;
     box-sizing: border-box;
     z-index: 100;
-    font-family: Verdana, sans-serif;
     font-size: 18px;
     margin: 0 0 5px;
     transition: color .35s;
@@ -772,11 +801,15 @@ a.transparent {
 
 .eventManagement {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     border-top: 1px solid #F2F2F2;
     padding-top: 50px;
 }
 
+.eventPhoto{
+    display: flex;
+    justify-content: center;
+}
 .eventManagement img {
     height: 250px;
     width: 250px;
@@ -784,34 +817,40 @@ a.transparent {
     border-radius: 50%;
 }
 
+.eventsInfoBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eventsInfo{
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
 .eventDescription {
-    justify-self: end;
+    padding-top: 30px;
 }
 
-.eventDates {
-    justify-self: center;
+.eventsDate {
+    display: flex;
+    justify-content: center;
 }
 
-.eventsLine{
+.eventsLine {
     display: none;
     height: 20px;
     width: 100%;
     border-bottom: 1px solid grey;
 }
 
-.eventDatesMob {
-    display: none;
-}
-
 .eventDates p {
     font-size: 18px;
-    padding-top: 45px;
-    padding-left: 30px;
 }
 
-.eventDescription p {
+.eventsDescription p {
     font-size: 20px;
-    padding-top: 20px;
     color: #124e78;
 }
 
@@ -844,9 +883,8 @@ a.transparent {
 }
 
 .contactsBanner {
-    justify-self: center;
     background-color: #fff;
-    width: 740px;
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -867,6 +905,7 @@ a.transparent {
 .contacts .contactsSocial {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 20px 0 50px;
 }
 
@@ -884,7 +923,7 @@ a.transparent {
     align-items: center;
 }
 
-.contactsSocial a i{
+.contactsSocial a i {
     font-size: 28px;
     width: 40px;
     height: 40px;
@@ -901,7 +940,7 @@ a.transparent {
     width: 50px;
 }
 
-.contactsSocial .grantLogo{
+.contactsSocial .grantLogo {
     width: 86px;
 }
 
@@ -935,10 +974,18 @@ a.transparent {
     font-weight: 700;
 }
 
+/*---VideoBlock*/
+.videoBlock{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 /*--- Slider ---*/
 
-.sliderContainer{
-    overflow-x: hidden ;
+.sliderContainer {
+    overflow-x: hidden;
+    height: 631px;
 }
 
 .wrapper {
@@ -1043,6 +1090,26 @@ a.transparent {
 }
 
 
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #124e78;
+    padding-bottom: 20px;
+}
+
+footer .button{
+    background-color: #fff;
+    color: #124e78;
+}
+
+@media (max-width: 1400px) {
+    .criteriaCardBlock {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
 @media (max-width: 1300px) {
     .container {
         width: 90vw;
@@ -1053,6 +1120,14 @@ a.transparent {
         font-size: 36px;
         line-height: 36px;
         width: 70%;
+    }
+
+    .eventManagement{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventsInfoBlock{
+        padding-top: 50px;
     }
 
     .bannerRulesContainer {
@@ -1135,6 +1210,10 @@ a.transparent {
         grid-template-columns: 50px 1fr;
     }
 
+    .toApplyText {
+        width: 600px;
+    }
+
     .round-last::after {
         position: absolute;
         border-left: 2px solid #dcddde;
@@ -1163,11 +1242,6 @@ a.transparent {
 
     .dateMob {
         display: block;
-    }
-
-    .criteriaCardBlock {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
     }
 
     .contactsSocial img {
@@ -1226,7 +1300,7 @@ a.transparent {
         display: none;
     }
 
-    .eventsLine{
+    .eventsLine {
         display: block;
     }
 
@@ -1252,10 +1326,10 @@ a.transparent {
     .linkContainer p {
         padding: 0 20px;
     }
-    .social{
+
+    .social {
         margin-right: 15px;
     }
-
 }
 
 @media (max-width: 750px) {
@@ -1287,6 +1361,15 @@ a.transparent {
     .wrapper .controls {
         left: 50vw;
     }
+
+    .toApplyText {
+        width: 500px;
+    }
+
+    .eventsContainer{
+        width: 90%;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -1304,47 +1387,68 @@ a.transparent {
         margin-bottom: -50px;
     }
 
-    .round-first::after {
-        position: absolute;
-        border-left: 2px solid #dcddde;
-        width: 1px;
-        bottom: -500px;
-        content: "";
-        left: 9px;
-        top: 20px;
+    .eventManagement{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventsInfoBlock{
+        padding-top: 50px;
+    }
+    .eventsInfo{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventsDate{
+        padding-bottom: 10px;
     }
 
-    .round::after {
-        position: absolute;
-        border-left: 2px solid #dcddde;
-        width: 1px;
-        bottom: -1000px;
-        content: "";
-        left: 9px;
-        top: 20px;
+    .eventsDescription{
+        padding-bottom: 20px;
+        text-align: center;
     }
 
-    .round-last::after {
-        position: absolute;
-        border-left: 2px solid #dcddde;
-        width: 1px;
-        bottom: -350px;
-        content: "";
-        left: 9px;
-        top: 20px;
-    }
+    /*    .round-first::after {
+            position: absolute;
+            border-left: 2px solid #dcddde;
+            width: 1px;
+            bottom: -500px;
+            content: "";
+            left: 9px;
+            top: 20px;
+        }
 
-    .line::after {
-        position: absolute;
-        border-left: 2px solid #dcddde;
-        width: 1px;
-        bottom: -200px;
-        content: "";
-        left: 22px;
-        top: 44px;
-    }
+        .round::after {
+            position: absolute;
+            border-left: 2px solid #dcddde;
+            width: 1px;
+            bottom: -1000px;
+            content: "";
+            left: 9px;
+            top: 20px;
+        }
 
-    /*в як податись линия между 1 и 2 увеличить bottom в отрицательную сторону*/
+        .round-last::after {
+            position: absolute;
+            border-left: 2px solid #dcddde;
+            width: 1px;
+            bottom: -350px;
+            content: "";
+            left: 9px;
+            top: 20px;
+        }
+
+        .line::after {
+            position: absolute;
+            border-left: 2px solid #dcddde;
+            width: 1px;
+            bottom: -200px;
+            content: "";
+            left: 22px;
+            top: 44px;
+        }*/
+    .toApplyText {
+        width: 400px;
+    }
 }
 
 @media (max-width: 630px) {
@@ -1370,6 +1474,16 @@ a.transparent {
         justify-content: center;
         padding: 20px 25px;
     }
+
+    .toApplyText {
+        width: 300px;
+    }
+
+    footer .button{
+        background-color: #fff;
+        color: #124e78;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1394,6 +1508,9 @@ a.transparent {
     .toApplyBlock {
         grid-template-columns: 150px 1fr;
     }
+    .toApplyBlock ol{
+        padding: 0 10px;
+    }
 
     .linkContainer {
         flex-direction: column;
@@ -1405,6 +1522,23 @@ a.transparent {
 
     .bannerRulesBlock {
         height: 250px;
+    }
+
+    .toApplyText {
+        width: 280px;
+    }
+    .warning{
+        padding: 0 25px ;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .button{
+        background-color: #fff;
+        color: #124e78;
     }
 }
 
